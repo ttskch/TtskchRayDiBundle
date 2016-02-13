@@ -1,0 +1,17 @@
+{
+  "name": "qck/ray-di-bundle",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Qck\\RayDiBundle\\": ""
+    }
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "symfony/framework-bundle": "^2.3|^3.0",
+    "ray/di": "^2.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8"
+  }
+}
