@@ -1,8 +1,8 @@
 <?php
 
-namespace Qck\RayDiBundle\Tests\DependencyInjection;
+namespace Tch\RayDiBundle\Tests\DependencyInjection;
 
-use Qck\RayDiBundle\DependencyInjection\QckRayDiExtension;
+use Tch\RayDiBundle\DependencyInjection\TchRayDiExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
@@ -15,14 +15,14 @@ class DefaultControllerTest extends \PHPUnit_Framework_TestCase
     private $container;
 
     /**
-     * @var QckRayDiExtension
+     * @var TchRayDiExtension
      */
     private $extension;
 
     public function setUp()
     {
         $this->container = new ContainerBuilder(new ParameterBag());
-        $this->extension = new QckRayDiExtension;
+        $this->extension = new TchRayDiExtension;
     }
 
     /**
@@ -33,9 +33,9 @@ class DefaultControllerTest extends \PHPUnit_Framework_TestCase
         $configs = $this->getConfigs();
         $this->extension->load($configs, $this->container);
 
-        $this->assertTrue($this->container->has('qck_ray_di.injector'));
+        $this->assertTrue($this->container->has('tch_ray_di.injector'));
 
-        $definition = $this->container->getDefinition('qck_ray_di.injector');
+        $definition = $this->container->getDefinition('tch_ray_di.injector');
         $this->assertEquals('Ray\Di\Injector', $definition->getClass());
 
         /** @var Definition $moduleDefinition */
@@ -47,7 +47,7 @@ class DefaultControllerTest extends \PHPUnit_Framework_TestCase
     private function getConfigs()
     {
         return [
-            'qck_ray_di' => [
+            'tch_ray_di' => [
                 'module_class' => 'Foo\BarModule',
             ],
         ];

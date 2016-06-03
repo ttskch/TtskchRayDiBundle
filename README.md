@@ -1,8 +1,8 @@
-# QckRayDiBundle
+# TchRayDiBundle
 
-[![Build Status](https://travis-ci.org/qckanemoto/QckRayDiBundle.svg?branch=master)](https://travis-ci.org/qckanemoto/QckRayDiBundle)
-[![Latest Stable Version](https://poser.pugx.org/qck/ray-di-bundle/version)](https://packagist.org/packages/qck/ray-di-bundle)
-[![Total Downloads](https://poser.pugx.org/qck/ray-di-bundle/downloads)](https://packagist.org/packages/qck/ray-di-bundle)
+[![Build Status](https://travis-ci.org/ttskch/TchRayDiBundle.svg?branch=master)](https://travis-ci.org/ttskch/TchRayDiBundle)
+[![Latest Stable Version](https://poser.pugx.org/ttskch/ray-di-bundle/version)](https://packagist.org/packages/ttskch/ray-di-bundle)
+[![Total Downloads](https://poser.pugx.org/ttskch/ray-di-bundle/downloads)](https://packagist.org/packages/ttskch/ray-di-bundle)
 
 Integration of [Ray.Di](https://github.com/ray-di/Ray.Di) into Symfony.
 
@@ -11,7 +11,7 @@ Integration of [Ray.Di](https://github.com/ray-di/Ray.Di) into Symfony.
 #### 1. Composer-require
 
 ```bash
-$ composer require qck/ray-di-bundle
+$ composer require ttskch/ray-di-bundle
 ```
 
 #### 2. Register with AppKernel
@@ -25,7 +25,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             // ...
-            new Qck\RayDiBundle\QckRayDiBundle(),
+            new Tch\RayDiBundle\TchRayDiBundle(),
         ];
         // ...
     }
@@ -38,7 +38,7 @@ class AppKernel extends Kernel
 ```yml
 # app/config/config.yml
 
-qck_ray_di:
+tch_ray_di:
     module_class: 'Foo\BarModule'   # FQCN of your main Ray.Di `module`
 ```
 
@@ -64,7 +64,7 @@ class SomeController extends Controller
     public function indexAction()
     {
         /** @var \Ray\Di\Injector $injector */
-        $injector = $this->get('qck_ray_di.injector');
+        $injector = $this->get('tch_ray_di.injector');
 
         $someService = $injector->getInstance(SomeServiceInterface::class);
 

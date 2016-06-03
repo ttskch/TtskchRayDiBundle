@@ -1,9 +1,9 @@
 {
-  "name": "qck/ray-di-bundle",
+  "name": "ttskch/ray-di-bundle",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Qck\\RayDiBundle\\": ""
+      "Tch\\RayDiBundle\\": ""
     }
   },
   "require": {
