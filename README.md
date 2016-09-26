@@ -1,6 +1,6 @@
-# TchRayDiBundle
+# TtskchRayDiBundle
 
-[![Build Status](https://travis-ci.org/ttskch/TchRayDiBundle.svg?branch=master)](https://travis-ci.org/ttskch/TchRayDiBundle)
+[![Build Status](https://travis-ci.org/ttskch/TtskchRayDiBundle.svg?branch=master)](https://travis-ci.org/ttskch/TtskchRayDiBundle)
 [![Latest Stable Version](https://poser.pugx.org/ttskch/ray-di-bundle/version)](https://packagist.org/packages/ttskch/ray-di-bundle)
 [![Total Downloads](https://poser.pugx.org/ttskch/ray-di-bundle/downloads)](https://packagist.org/packages/ttskch/ray-di-bundle)
 
@@ -25,7 +25,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             // ...
-            new Tch\RayDiBundle\TchRayDiBundle(),
+            new Ttskch\RayDiBundle\TtskchRayDiBundle(),
         ];
         // ...
     }

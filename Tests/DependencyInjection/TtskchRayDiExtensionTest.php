@@ -1,8 +1,8 @@
 <?php
 
-namespace Tch\RayDiBundle\Tests\DependencyInjection;
+namespace Ttskch\RayDiBundle\Tests\DependencyInjection;
 
-use Tch\RayDiBundle\DependencyInjection\TchRayDiExtension;
+use Ttskch\RayDiBundle\DependencyInjection\TtskchRayDiExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
@@ -15,14 +15,14 @@ class DefaultControllerTest extends \PHPUnit_Framework_TestCase
     private $container;
 
     /**
-     * @var TchRayDiExtension
+     * @var TtskchRayDiExtension
      */
     private $extension;
 
     public function setUp()
     {
         $this->container = new ContainerBuilder(new ParameterBag());
-        $this->extension = new TchRayDiExtension;
+        $this->extension = new TtskchRayDiExtension;
     }
 
     /**
