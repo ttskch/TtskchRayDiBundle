@@ -33,9 +33,9 @@ class DefaultControllerTest extends \PHPUnit_Framework_TestCase
         $configs = $this->getConfigs();
         $this->extension->load($configs, $this->container);
 
-        $this->assertTrue($this->container->has('tch_ray_di.injector'));
+        $this->assertTrue($this->container->has('ttskch_ray_di.injector'));
 
-        $definition = $this->container->getDefinition('tch_ray_di.injector');
+        $definition = $this->container->getDefinition('ttskch_ray_di.injector');
         $this->assertEquals('Ray\Di\Injector', $definition->getClass());
 
         /** @var Definition $moduleDefinition */
@@ -47,7 +47,7 @@ class DefaultControllerTest extends \PHPUnit_Framework_TestCase
     private function getConfigs()
     {
         return [
-            'tch_ray_di' => [
+            'ttskch_ray_di' => [
                 'module_class' => 'Foo\BarModule',
             ],
         ];

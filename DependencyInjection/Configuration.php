@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('tch_ray_di');
+        $rootNode = $treeBuilder->root('ttskch_ray_di');
 
         $rootNode
             ->children()

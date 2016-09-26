@@ -24,7 +24,7 @@ class TtskchRayDiExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $container
-            ->setDefinition('tch_ray_di.injector', new Definition('Ray\Di\Injector', [
+            ->setDefinition('ttskch_ray_di.injector', new Definition('Ray\Di\Injector', [
                 new Definition($config['module_class'])
             ]))
         ;
