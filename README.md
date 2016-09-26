@@ -38,7 +38,7 @@ class AppKernel extends Kernel
 ```yml
 # app/config/config.yml
 
-tch_ray_di:
+ttskch_ray_di:
     module_class: 'Foo\BarModule'   # FQCN of your main Ray.Di `module`
 ```
 
@@ -64,7 +64,7 @@ class SomeController extends Controller
     public function indexAction()
     {
         /** @var \Ray\Di\Injector $injector */
-        $injector = $this->get('tch_ray_di.injector');
+        $injector = $this->get('ttskch_ray_di.injector');
 
         $someService = $injector->getInstance(SomeServiceInterface::class);
 
